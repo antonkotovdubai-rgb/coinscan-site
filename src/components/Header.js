@@ -5,58 +5,52 @@ import { useState } from 'react'
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const nav = [
+    ['Features', '#features'],
+    ['How it works', '#how-it-works'],
+    ['Premium', '#premium'],
+    ['Support', '/support'],
+  ]
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0e0b07]/80 backdrop-blur-md border-b border-[rgba(201,138,20,0.12)]">
-      <div className="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#e4a825] to-[#8a5a08] flex items-center justify-center shadow-lg shadow-[rgba(201,138,20,0.3)]">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <circle cx="8" cy="8" r="5.5" stroke="#0e0b07" strokeWidth="1.5"/>
-              <text x="8" y="11.5" textAnchor="middle" fontSize="7" fill="#0e0b07" fontWeight="700">C</text>
-            </svg>
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#060915]/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+        <Link href="/" className="flex items-center gap-3">
+          <img src="/logo.png" alt="CoinScan logo" className="h-9 w-9 rounded-2xl shadow-lg shadow-[#7C9BFF]/25" />
+          <div className="leading-tight">
+            <div className="text-base font-semibold tracking-wide text-white">CoinScan</div>
+            <div className="hidden text-[11px] uppercase tracking-[0.18em] text-[#9DABCF] sm:block">Numismatic Identifier</div>
           </div>
-          <span className="font-display text-xl font-semibold text-[#e8dcc8] tracking-wide group-hover:text-[#e4a825] transition-colors">
-            CoinScan
-          </span>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-body text-[#8a7d6a]">
-          <a href="#features" className="hover:text-[#e4a825] transition-colors">Features</a>
-          <a href="#how-it-works" className="hover:text-[#e4a825] transition-colors">How It Works</a>
-          <a href="#premium" className="hover:text-[#e4a825] transition-colors">Premium</a>
+        <nav className="hidden items-center gap-7 text-sm text-[#B8C3E5] md:flex">
+          {nav.map(([label, href]) => (
+            <a key={label} href={href} className="transition-colors hover:text-white">{label}</a>
+          ))}
         </nav>
 
-        {/* Mobile hamburger */}
+        <a href="#app-store" className="hidden rounded-full border border-[#7C9BFF]/40 bg-[#7C9BFF]/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-[#7C9BFF]/20 md:inline-flex">
+          App Store soon
+        </a>
+
         <button
-          className="md:hidden text-[#8a7d6a] hover:text-[#e4a825] transition-colors p-1"
+          className="rounded-xl border border-white/10 p-2 text-[#B8C3E5] md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            {menuOpen ? (
-              <>
-                <line x1="4" y1="4" x2="18" y2="18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                <line x1="18" y1="4" x2="4" y2="18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </>
-            ) : (
-              <>
-                <line x1="3" y1="7" x2="19" y2="7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                <line x1="3" y1="11" x2="19" y2="11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                <line x1="3" y1="15" x2="19" y2="15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </>
-            )}
-          </svg>
+          <span className="block h-0.5 w-5 bg-current" />
+          <span className="mt-1.5 block h-0.5 w-5 bg-current" />
+          <span className="mt-1.5 block h-0.5 w-5 bg-current" />
         </button>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#161209] border-t border-[rgba(201,138,20,0.12)] px-5 py-4 flex flex-col gap-4 text-sm text-[#8a7d6a]">
-          <a href="#features" onClick={() => setMenuOpen(false)} className="hover:text-[#e4a825] transition-colors">Features</a>
-          <a href="#how-it-works" onClick={() => setMenuOpen(false)} className="hover:text-[#e4a825] transition-colors">How It Works</a>
-          <a href="#premium" onClick={() => setMenuOpen(false)} className="hover:text-[#e4a825] transition-colors">Premium</a>
+        <div className="border-t border-white/10 bg-[#0B1020] px-5 py-5 md:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-[#B8C3E5]">
+            {nav.map(([label, href]) => (
+              <a key={label} href={href} onClick={() => setMenuOpen(false)} className="hover:text-white">{label}</a>
+            ))}
+          </div>
         </div>
       )}
     </header>

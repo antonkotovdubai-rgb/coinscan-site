@@ -1,34 +1,17 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
 
-export default function LegalLayout({ title, lastUpdated, children }) {
+export default function LegalLayout({ title, updated, children }) {
   return (
     <>
       <Header />
-      <main className="min-h-screen pt-24 pb-20 px-5">
-        <div className="max-w-3xl mx-auto">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs text-[#5a4e3e] mb-10">
-            <Link href="/" className="hover:text-[#c98a14] transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-[#8a7d6a]">{title}</span>
-          </div>
-
-          {/* Title */}
-          <div className="mb-10 pb-8 border-b border-[rgba(201,138,20,0.12)]">
-            <p className="text-[#c98a14] text-xs tracking-[0.2em] uppercase mb-3">CoinScan</p>
-            <h1 className="font-display text-4xl md:text-5xl font-light text-[#e8dcc8] mb-4">{title}</h1>
-            {lastUpdated && (
-              <p className="text-[#5a4e3e] text-sm">Last updated: {lastUpdated}</p>
-            )}
-          </div>
-
-          {/* Content */}
-          <div className="legal-content">
-            {children}
-          </div>
-        </div>
+      <main className="px-5 pb-20 pt-28">
+        <article className="mx-auto max-w-3xl rounded-[32px] border border-white/10 bg-white/[0.04] p-7 md:p-10">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#7C9BFF]">CoinScan</p>
+          <h1 className="text-4xl font-semibold tracking-[-0.03em] text-white">{title}</h1>
+          {updated && <p className="mt-3 text-sm text-[#8793B8]">Last updated: {updated}</p>}
+          <div className="legal-content mt-8">{children}</div>
+        </article>
       </main>
       <Footer />
     </>

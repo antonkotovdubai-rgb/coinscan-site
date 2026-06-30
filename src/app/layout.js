@@ -1,15 +1,19 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'CoinScan — AI Coin Recognition',
-  description: 'Identify any coin instantly with AI. Scan both sides and get country, denomination, year, material, history, and estimated auction value.',
-  keywords: 'coin recognition, coin identification, numismatics, coin scanner, AI coins, coin collector app',
+  title: 'CoinScan Numismatic Identifier — AI Coin Scanner',
+  description: 'CoinScan Numismatic Identifier helps collectors identify coins from obverse and reverse photos, save scan history, build a collection, and view informational auction value estimates.',
+  keywords: 'CoinScan, Numismatic Identifier, coin scanner, coin identification, coin collector app, numismatics, AI coin recognition',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#0e0b07] text-[#e8dcc8] font-body antialiased">
+      <body className="bg-[#060915] text-[#F4F7FF] font-body antialiased">
         {children}
       </body>
     </html>
