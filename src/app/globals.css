@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --gold-primary: #c98a14;
+  --gold-light: #e4a825;
+  --gold-glow: rgba(201, 138, 20, 0.35);
+  --bg-dark: #0e0b07;
+  --bg-card: #161209;
+  --bg-card-hover: #1e1710;
+  --border-gold: rgba(201, 138, 20, 0.2);
+  --text-primary: #e8dcc8;
+  --text-muted: #8a7d6a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gold shimmer text */
+.text-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #c98a14 0%,
+    #f2d88a 30%,
+    #ebbf4a 50%,
+    #f2d88a 70%,
+    #c98a14 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Card glow on hover */
+.card-glow {
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-gold);
+}
+
+.card-glow:hover {
+  border-color: rgba(201, 138, 20, 0.45);
+  box-shadow: 0 0 28px rgba(201, 138, 20, 0.12), 0 8px 32px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
+
+/* Radial glow background */
+.hero-glow {
+  background: radial-gradient(ellipse 80% 50% at 50% 30%, rgba(201, 138, 20, 0.1) 0%, transparent 70%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0e0b07; }
+::-webkit-scrollbar-thumb { background: #3a2e1a; border-radius: 3px; }
+
+/* Legal page styles */
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #e4a825;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content p {
+  color: #b0a090;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.legal-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #b0a090;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
