@@ -10,7 +10,7 @@ export default function PrivacyPage() {
       <p>This Privacy Policy explains how CoinScan Numismatic Identifier handles information when you use the application and website.</p>
 
       <h2>1. App information</h2>
-      <p>CoinScan Numismatic Identifier is created by Anton Kotov. Support email: coinscanidentifier@gmail.com.</p>
+      <p>CoinScan provides the CoinScan Numismatic Identifier app and website. Support email: coinscanidentifier@gmail.com.</p>
 
       <h2>2. Information processed by the app</h2>
       <p>The app may process coin photos that you provide in order to identify the coin, describe its obverse and reverse, and create an informational result. The app may also store scan history, collection data, and saved coin images locally on your device.</p>

@@ -197,7 +197,7 @@ export default function HomePage() {
             <img src="/logo.png" alt="CoinScan logo" className="mx-auto h-16 w-16 rounded-3xl" />
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.03em] text-white">Support and contact</h2>
             <p className="mx-auto mt-3 max-w-2xl text-[#B8C3E5]">
-              CoinScan Numismatic Identifier is created by Anton Kotov. For support, privacy, or subscription questions, contact us by email.
+              For support, privacy, or subscription questions, contact the CoinScan team by email.
             </p>
             <a href="mailto:coinscanidentifier@gmail.com" className="mt-6 inline-flex rounded-full bg-[#7C9BFF] px-6 py-3 text-sm font-semibold text-[#071022] transition hover:bg-[#9EB3FF]">
               coinscanidentifier@gmail.com

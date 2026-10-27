@@ -10,7 +10,7 @@ export default function Footer() {
               <img src="/logo.png" alt="CoinScan logo" className="h-9 w-9 rounded-2xl" />
               <div>
                 <div className="font-semibold text-white">CoinScan Numismatic Identifier</div>
-                <div className="text-xs text-[#8793B8]">Created by Anton Kotov</div>
+                <div className="text-xs text-[#8793B8]">Official website</div>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-[#8793B8]">
