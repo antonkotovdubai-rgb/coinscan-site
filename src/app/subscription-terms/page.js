@@ -6,11 +6,11 @@ export const metadata = {
 
 export default function SubscriptionTermsPage() {
   return (
-    <LegalLayout title="Subscription Terms" updated="July 1, 2026">
+    <LegalLayout title="Subscription Terms" updated="October 27, 2026">
       <p>CoinScan Numismatic Identifier offers optional Premium subscriptions.</p>
 
       <h2>1. Plans</h2>
-      <p>Available plans may include a weekly subscription for $4.99 and a yearly subscription for $29.99. A 3-day free trial may be available for eligible users.</p>
+      <p>Available plans may include a weekly subscription for $7.99 and a yearly subscription for $34.99. A 3-day free trial may be available for eligible users.</p>
 
       <h2>2. Premium features</h2>
       <p>During an active Premium subscription, users may receive unlimited coin analysis and access to premium collection and history features where available in the app.</p>

@@ -2,8 +2,8 @@ import './globals.css'
 
 export const metadata = {
   title: 'CoinScan Numismatic Identifier — AI Coin Scanner',
-  description: 'CoinScan Numismatic Identifier helps collectors identify coins from obverse and reverse photos, save scan history, build a collection, and view informational auction value estimates.',
-  keywords: 'CoinScan, Numismatic Identifier, coin scanner, coin identification, coin collector app, numismatics, AI coin recognition',
+  description: 'CoinScan Numismatic Identifier helps collectors identify coins from two photos and estimate market value using current comparable offers from real auction marketplaces when available.',
+  keywords: 'CoinScan, Numismatic Identifier, coin scanner, coin identification, coin collector app, numismatics, AI coin recognition, coin auction data, coin value estimate',
   icons: {
     icon: '/logo.png',
     apple: '/logo.png',

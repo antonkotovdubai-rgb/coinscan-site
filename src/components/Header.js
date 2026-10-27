@@ -29,8 +29,8 @@ export default function Header() {
           ))}
         </nav>
 
-        <a href="#app-store" className="hidden rounded-full border border-[#7C9BFF]/40 bg-[#7C9BFF]/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-[#7C9BFF]/20 md:inline-flex">
-          App Store soon
+        <a href="https://apps.apple.com/us/app/coinscan-numismatic-identifier/id6782162184" target="_blank" rel="noreferrer" className="hidden rounded-full border border-[#7C9BFF]/40 bg-[#7C9BFF]/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-[#7C9BFF]/20 md:inline-flex">
+          Get on the App Store
         </a>
 
         <button

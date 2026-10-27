@@ -14,7 +14,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed text-[#8793B8]">
-              AI-powered coin recognition for collectors. Informational results and auction estimates only — not a professional appraisal.
+              AI-powered coin recognition with value estimates grounded in current comparable auction offers when available. Informational only — not a professional appraisal.
             </p>
           </div>
 
