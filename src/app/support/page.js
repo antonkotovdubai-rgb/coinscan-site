@@ -13,7 +13,7 @@ export default function SupportPage() {
       <p>Email: coinscanidentifier@gmail.com</p>
 
       <h2>About the app</h2>
-      <p>CoinScan helps users identify coins from obverse and reverse photos, save scan history, manage a collection, and estimate market value using current comparable offers from real auction marketplaces when available.</p>
+      <p>CoinScan uses AI to help match obverse and reverse photos with records in its own curated coin database. The database provides coin characteristics and reference details, is reviewed and refreshed daily, and is continuously expanded. CoinScan also helps users save scan history, manage a collection, and estimate market value using current comparable offers from real auction marketplaces when available.</p>
 
       <h2>Before contacting support</h2>
       <ul>

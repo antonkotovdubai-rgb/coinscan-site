@@ -2,8 +2,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const features = [
-  ['Two-sided AI identification', 'Take photos of the obverse and reverse. CoinScan analyzes both sides to identify the country, denomination, year, and material.'],
-  ['Detailed coin explanation', 'Get clear notes about inscriptions, design elements, unique features, and why the coin was identified this way.'],
+  ['Two-sided AI identification', 'Take photos of the obverse and reverse. AI compares both sides to help match your coin with a record in CoinScan’s own database.'],
+  ['CoinScan’s own coin database', 'Get coin characteristics and reference information from CoinScan’s curated database, reviewed and refreshed every day.'],
   ['Live auction market data', 'View current comparable offers from real auction marketplaces, with source references and an estimated market range when available.'],
   ['History and collection', 'Save scans, browse previous results, organize your collection, search, sort, and mark favorites.'],
   ['Statistics', 'Track countries, denominations, materials, collection value estimates, and top items in one clean dashboard.'],
@@ -12,7 +12,7 @@ const features = [
 
 const steps = [
   ['01', 'Photograph the coin', 'Use good light and take one photo of each side of the coin.'],
-  ['02', 'Let AI analyze it', 'CoinScan reads visual details and prepares a structured numismatic result.'],
+  ['02', 'Match it to CoinScan’s database', 'AI reads the visual details and helps match the coin with a record in CoinScan’s own curated database.'],
   ['03', 'Review real market data', 'Compare current auction offers when available, review the estimated range, and save the coin to your collection.'],
 ]
 
@@ -30,7 +30,7 @@ export default function HomePage() {
             <div>
               <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#B8C3E5]">
                 <img src="/logo.png" alt="CoinScan logo" className="h-6 w-6 rounded-lg" />
-                AI identification + live auction market data
+                Own coin database + live auction market data
               </div>
 
               <h1 className="max-w-3xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-white md:text-7xl">
@@ -38,7 +38,7 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-[#B8C3E5]">
-                Identify coins from photos, understand both sides, and estimate market value using current comparable offers from real auction marketplaces when available.
+                AI matches your photos to CoinScan’s own curated coin database. Coin details come from database records reviewed daily, while value estimates use current comparable auction offers when available.
               </p>
 
               <div id="app-store" className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -82,6 +82,35 @@ export default function HomePage() {
                   <p className="mt-3 text-sm leading-7 text-[#9DABCF]">{text}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-5 py-20">
+          <div className="mx-auto max-w-6xl overflow-hidden rounded-[36px] border border-[#7C9BFF]/35 bg-gradient-to-br from-[#121B3D] via-[#0D1530] to-[#080C19] p-8 md:p-12">
+            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <p className="text-sm font-medium uppercase tracking-[0.25em] text-[#8EA9FF]">CoinScan’s own coin database</p>
+                <h2 className="mt-3 text-4xl font-semibold tracking-[-0.03em] text-white md:text-5xl">AI finds the match. Our database provides the facts.</h2>
+                <p className="mt-5 leading-8 text-[#B8C3E5]">
+                  CoinScan does not rely on AI to invent numismatic information. AI analyzes the photos and helps match the coin, while its characteristics and reference details come from CoinScan’s own curated database.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-3xl border border-white/10 bg-white/[0.05] p-6">
+                  <div className="text-xs font-medium uppercase tracking-[0.2em] text-[#8EA9FF]">Curated records</div>
+                  <p className="mt-3 text-sm leading-7 text-[#B8C3E5]">Coin facts, characteristics, inscriptions, design details, and reference information are stored in CoinScan’s own database.</p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-white/[0.05] p-6">
+                  <div className="text-xs font-medium uppercase tracking-[0.2em] text-[#8EA9FF]">Reviewed every day</div>
+                  <p className="mt-3 text-sm leading-7 text-[#B8C3E5]">The database is checked, refreshed, and kept current on a daily basis.</p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-white/[0.05] p-6 sm:col-span-2">
+                  <div className="text-xs font-medium uppercase tracking-[0.2em] text-[#8EA9FF]">Continuously improved</div>
+                  <p className="mt-3 text-sm leading-7 text-[#B8C3E5]">CoinScan continuously expands its database and verifies updates and corrections before they become part of the reference information.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
